@@ -1,12 +1,67 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Navigation from "@/components/Navigation";
+import Hero from "@/components/Hero";
+import Services from "@/components/Services";
+import Blog from "@/components/Blog";
+import Contact from "@/components/Contact";
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <Navigation />
+      <Hero />
+      <Services />
+      <Blog />
+      <Contact />
+      
+      {/* Footer */}
+      <footer className="bg-card border-t border-border py-12">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="md:col-span-2">
+              <h3 className="font-serif text-2xl font-bold mb-4">CA Professional</h3>
+              <p className="text-muted-foreground mb-4 max-w-md">
+                Expert Chartered Accountant providing comprehensive financial services 
+                to help individuals and businesses achieve their financial goals.
+              </p>
+              <div className="flex space-x-4">
+                <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors cursor-pointer">
+                  📧
+                </div>
+                <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors cursor-pointer">
+                  📱
+                </div>
+                <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors cursor-pointer">
+                  💼
+                </div>
+              </div>
+            </div>
+            
+            <div>
+              <h4 className="font-semibold mb-4">Services</h4>
+              <ul className="space-y-2 text-muted-foreground">
+                <li className="hover:text-primary cursor-pointer transition-colors">Tax Filing</li>
+                <li className="hover:text-primary cursor-pointer transition-colors">GST Compliance</li>
+                <li className="hover:text-primary cursor-pointer transition-colors">Audit Services</li>
+                <li className="hover:text-primary cursor-pointer transition-colors">Financial Advisory</li>
+              </ul>
+            </div>
+            
+            <div>
+              <h4 className="font-semibold mb-4">Contact</h4>
+              <ul className="space-y-2 text-muted-foreground">
+                <li>+91 98765 43210</li>
+                <li>contact@caprofessional.com</li>
+                <li>Mumbai, India</li>
+                <li>Mon-Fri 9AM-6PM</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
+            <p>&copy; 2024 CA Professional. All rights reserved. | Designed with care for financial excellence.</p>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 };
