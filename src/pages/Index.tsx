@@ -4,6 +4,7 @@ import Services from "@/components/Services";
 import ProfessionalProfile from "@/components/ProfessionalProfile";
 import VisitingCard from "@/components/VisitingCard";
 import Contact from "@/components/Contact";
+import Blog from "@/components/Blog";
 
 const Index = () => {
   return (
@@ -11,7 +12,8 @@ const Index = () => {
       <Navigation />
       <Hero />
       <Services />
-      <ProfessionalProfile />
+      {/* <ProfessionalProfile /> */}
+      <Blog />
       <VisitingCard />
       <Contact />
       
