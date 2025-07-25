@@ -66,17 +66,6 @@ export default {
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
 				},
-				// Professional CA colors
-				navy: {
-					DEFAULT: 'hsl(var(--navy))',
-					light: 'hsl(var(--navy-light))',
-					dark: 'hsl(var(--navy-dark))'
-				},
-				gold: {
-					DEFAULT: 'hsl(var(--gold))',
-					light: 'hsl(var(--gold-light))',
-					dark: 'hsl(var(--gold-dark))'
-				}
 			},
 			borderRadius: {
 				lg: 'var(--radius)',

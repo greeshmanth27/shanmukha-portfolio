@@ -8,120 +8,85 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 213 31% 14%;
-
-    --card: 0 0% 100%;
-    --card-foreground: 213 31% 14%;
-
-    --popover: 0 0% 100%;
-    --popover-foreground: 213 31% 14%;
-
-    --primary: 213 94% 68%;
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 213 27% 84%;
-    --secondary-foreground: 213 31% 14%;
-
-    --muted: 220 14% 96%;
-    --muted-foreground: 220 8.9% 46.1%;
-
-    --accent: 43 74% 66%;
-    --accent-foreground: 213 31% 14%;
-
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 213 94% 68%;
-
+    /* Minimal Color Palette - Soft Slate & Warm Gray */
+    --background: 249 250 251;
+    --foreground: 17 24 39;
+    
+    --card: 255 255 255;
+    --card-foreground: 17 24 39;
+    
+    --popover: 255 255 255;
+    --popover-foreground: 17 24 39;
+    
+    --primary: 75 85 99;         /* Gray-600 - Professional slate */
+    --primary-foreground: 249 250 251;
+    
+    --secondary: 243 244 246;    /* Gray-100 - Soft background */
+    --secondary-foreground: 55 65 81;
+    
+    --muted: 243 244 246;        
+    --muted-foreground: 107 114 128;
+    
+    --accent: 156 163 175;       /* Gray-400 - Subtle accent */
+    --accent-foreground: 17 24 39;
+    
+    --destructive: 239 68 68;
+    --destructive-foreground: 249 250 251;
+    
+    --border: 229 231 235;       /* Gray-200 */
+    --input: 229 231 235;
+    --ring: 75 85 99;
+    
     --radius: 0.75rem;
     
-    /* Professional CA color palette */
-    --navy: 213 94% 18%;
-    --navy-light: 213 94% 28%;
-    --navy-dark: 213 94% 8%;
-    --gold: 43 74% 66%;
-    --gold-light: 43 74% 76%;
-    --gold-dark: 43 74% 56%;
-    
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--navy)), hsl(var(--navy-light)));
-    --gradient-accent: linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-light)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--navy)) 0%, hsl(var(--navy-light)) 100%);
-    
-    /* Shadows */
-    --shadow-elegant: 0 10px 30px -10px hsl(var(--navy) / 0.3);
-    --shadow-card: 0 4px 20px -4px hsl(var(--navy) / 0.1);
-    --shadow-glow: 0 0 40px hsl(var(--gold) / 0.3);
-    
-    /* Animations */
-    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-
-    --sidebar-background: 0 0% 98%;
-
-    --sidebar-foreground: 240 5.3% 26.1%;
-
-    --sidebar-primary: 240 5.9% 10%;
-
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 249 250 251;
+    --sidebar-foreground: 55 65 81;
+    --sidebar-primary: 75 85 99;
+    --sidebar-primary-foreground: 249 250 251;
+    --sidebar-accent: 243 244 246;
+    --sidebar-accent-foreground: 55 65 81;
+    --sidebar-border: 229 231 235;
+    --sidebar-ring: 75 85 99;
   }
 
   .dark {
-    --background: 213 94% 8%;
-    --foreground: 0 0% 98%;
-
-    --card: 213 94% 12%;
-    --card-foreground: 0 0% 98%;
-
-    --popover: 213 94% 12%;
-    --popover-foreground: 0 0% 98%;
-
-    --primary: 213 94% 68%;
-    --primary-foreground: 0 0% 100%;
-
-    --secondary: 213 94% 18%;
-    --secondary-foreground: 0 0% 98%;
-
-    --muted: 213 94% 15%;
-    --muted-foreground: 213 27% 65%;
-
-    --accent: 43 74% 66%;
-    --accent-foreground: 213 94% 8%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 213 94% 18%;
-    --input: 213 94% 18%;
-    --ring: 213 94% 68%;
+    /* Dark mode - Charcoal & Warm Gray */
+    --background: 17 24 39;      /* Gray-900 */
+    --foreground: 249 250 251;   /* Gray-50 */
     
-    /* Dark mode professional colors */
-    --navy: 213 94% 68%;
-    --navy-light: 213 94% 78%;
-    --navy-dark: 213 94% 58%;
-    --gold: 43 74% 66%;
-    --gold-light: 43 74% 76%;
-    --gold-dark: 43 74% 56%;
+    --card: 31 41 55;            /* Gray-800 */
+    --card-foreground: 249 250 251;
     
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --popover: 31 41 55;
+    --popover-foreground: 249 250 251;
+    
+    --primary: 156 163 175;      /* Gray-400 */
+    --primary-foreground: 17 24 39;
+    
+    --secondary: 55 65 81;       /* Gray-700 */
+    --secondary-foreground: 249 250 251;
+    
+    --muted: 55 65 81;
+    --muted-foreground: 156 163 175;
+    
+    --accent: 107 114 128;       /* Gray-500 */
+    --accent-foreground: 249 250 251;
+    
+    --destructive: 239 68 68;
+    --destructive-foreground: 249 250 251;
+    
+    --border: 55 65 81;          /* Gray-700 */
+    --input: 55 65 81;
+    --ring: 156 163 175;         /* Gray-400 */
+    
+    --sidebar-background: 17 24 39;
+    --sidebar-foreground: 209 213 219;
+    --sidebar-primary: 156 163 175;
+    --sidebar-primary-foreground: 17 24 39;
+    --sidebar-accent: 31 41 55;
+    --sidebar-accent-foreground: 209 213 219;
+    --sidebar-border: 55 65 81;
+    --sidebar-ring: 156 163 175;
   }
 }
 
@@ -143,15 +108,15 @@ All colors MUST be HSL.
 @layer components {
   /* Professional button variants */
   .btn-primary {
-    @apply bg-gradient-to-r from-blue-600 to-blue-700 text-white px-6 py-3 rounded-lg font-semibold shadow-lg hover:from-blue-700 hover:to-blue-800 transform hover:scale-105 transition-all duration-300;
+    @apply bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold shadow-lg hover:bg-primary/90 transform hover:scale-105 transition-all duration-300;
   }
   
   .btn-secondary {
-    @apply bg-transparent border-2 border-accent text-accent px-6 py-3 rounded-lg font-semibold hover:bg-accent hover:text-accent-foreground transform hover:scale-105 transition-all duration-300;
+    @apply bg-transparent border-2 border-primary text-primary px-6 py-3 rounded-lg font-semibold hover:bg-primary hover:text-primary-foreground transform hover:scale-105 transition-all duration-300;
   }
   
   .btn-hero {
-    @apply bg-gradient-to-r from-blue-600 to-blue-700 text-white px-8 py-4 rounded-xl font-semibold shadow-xl hover:from-blue-700 hover:to-blue-800 hover:shadow-2xl transform hover:scale-105 transition-all duration-300;
+    @apply bg-primary text-primary-foreground px-8 py-4 rounded-xl font-semibold shadow-xl hover:bg-primary/90 hover:shadow-2xl transform hover:scale-105 transition-all duration-300;
   }
   
   /* Card styles */
