@@ -129,7 +129,7 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-primary to-accent rounded-2xl transform rotate-6 animate-glow"></div>
               <div className="relative bg-card rounded-2xl p-8 transform -rotate-2 hover:rotate-0 transition-transform duration-300">
                 <div className="aspect-square bg-gradient-to-br from-primary/20 to-accent/20 rounded-xl flex items-center justify-center">
-                  <div className="text-6xl"><img src="/profile.png" alt="" /></div>
+                  <div className="text-6xl"><img src="/profile.jpg" alt="" /></div>
                 </div>
                 <div className="mt-6 space-y-2">
                   <h3 className="text-2xl font-serif font-bold">CA and CMA Finalist</h3>

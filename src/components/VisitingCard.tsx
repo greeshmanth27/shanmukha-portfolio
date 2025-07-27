@@ -57,7 +57,7 @@ const VisitingCard = () => {
                 <div className="lg:col-span-2 space-y-6">
                   <div className="flex items-center gap-6">
                     <div className="w-24 h-24 bg-gradient-to-br from-primary to-accent rounded-2xl flex items-center justify-center text-3xl font-bold text-white shadow-xl">
-                      <img src="/profile.png" alt="Profile" className="w-full h-full object-cover" />
+                      <img src="/Ghibli.jpg" alt="Profile" className=" w-full h-full object-cover" />
                     </div>
                     <div>
                       <h3 className="text-3xl font-serif font-bold mb-2">Shanmukha Kanamarlapudi</h3>
