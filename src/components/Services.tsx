@@ -1,16 +1,16 @@
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
-import { 
-  Calculator, 
-  FileText, 
-  TrendingUp, 
-  Shield, 
-  Building2, 
+import {
+  Calculator,
+  FileText,
+  TrendingUp,
+  Shield,
+  Building2,
   PieChart,
   Briefcase,
   Users,
   Clock,
-  Award
+  Award,
 } from "lucide-react";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
@@ -23,48 +23,61 @@ const Services = () => {
     {
       icon: Calculator,
       title: "Tax Filing & Planning",
-      description: "Comprehensive tax solutions for individuals and businesses. Minimize your tax liability while staying compliant.",
-      features: ["Income Tax Returns", "Tax Planning", "Tax Advisory", "Appeals & Notices"]
+      description:
+        "Comprehensive tax solutions for individuals and businesses. Minimize your tax liability while staying compliant.",
+      features: [
+        "Income Tax Returns",
+        "Tax Planning",
+        "Tax Advisory",
+        "TDS Compliance",
+      ],
     },
-    {
-      icon: FileText,
-      title: "Audit & Assurance",
-      description: "Professional audit services ensuring accuracy, compliance, and transparency in your financial statements.",
-      features: ["Statutory Audits", "Internal Audits", "Tax Audits", "Management Audits"]
-    },
-    {
-      icon: TrendingUp,
-      title: "Financial Advisory",
-      description: "Strategic financial guidance to help your business grow and achieve long-term financial goals.",
-      features: ["Financial Planning", "Investment Advisory", "Risk Management", "Cash Flow Analysis"]
-    },
+    // {
+    //   icon: FileText,
+    //   title: "Audit & Assurance",
+    //   description: "Professional audit services ensuring accuracy, compliance, and transparency in your financial statements.",
+    //   features: ["Statutory Audits", "Internal Audits", "Tax Audits", "Management Audits"]
+    // },
+    // {
+    //   icon: TrendingUp,
+    //   title: "Financial Advisory",
+    //   description: "Strategic financial guidance to help your business grow and achieve long-term financial goals.",
+    //   features: ["Financial Planning", "Investment Advisory", "Risk Management", "Cash Flow Analysis"]
+    // },
     {
       icon: Shield,
       title: "GST Compliance",
-      description: "End-to-end GST services from registration to filing returns and handling compliance issues.",
-      features: ["GST Registration", "Return Filing", "Input Credit", "GST Advisory"]
+      description:
+        "End-to-end GST services from registration to filing returns and handling compliance issues.",
+      features: [
+        "GST Registration",
+        "Return Filing",
+        "GST Advisory",
+        "GST TDS",
+        "GST Reconciliation",
+      ],
     },
     {
-      icon: Building2,
-      title: "Company Incorporation",
-      description: "Complete business setup services including company registration, licensing, and compliance setup.",
-      features: ["Company Registration", "Partnership Deeds", "LLP Formation", "Licensing Support"]
+      icon: Briefcase, // or any other relevant icon like Building2 or PieChart
+      title: "Business Setup & Consulting",
+      description:
+        "Comprehensive services for company incorporation and expert financial guidance to help businesses launch, grow, and succeed.",
+      features: [
+        "Company Registration",
+        "Licensing & Compliance",
+        "Financial Modeling",
+        "Preparation of Financial Statements",
+      ],
     },
-    {
-      icon: PieChart,
-      title: "Business Consulting",
-      description: "Expert business advice to optimize operations, improve profitability, and drive sustainable growth.",
-      features: ["Business Strategy", "Financial Modeling", "Process Optimization", "Performance Analysis"]
-    }
   ];
 
   const containerVariants = {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.1
-      }
-    }
+        staggerChildren: 0.1,
+      },
+    },
   };
 
   const itemVariants = {
@@ -73,9 +86,9 @@ const Services = () => {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6
-      }
-    }
+        duration: 0.6,
+      },
+    },
   };
 
   return (
@@ -96,8 +109,8 @@ const Services = () => {
             <span className="text-primary block">Solutions</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            From tax planning to business advisory, I provide end-to-end financial services 
-            tailored to your specific needs and business objectives.
+            Combining academic rigor and hands-on training as a CA Finalist to
+            deliver tailored tax and advisory services for sustainable growth.
           </p>
         </motion.div>
 
@@ -122,18 +135,21 @@ const Services = () => {
                       <Icon className="w-6 h-6" />
                     </div>
                   </div>
-                  
+
                   <h3 className="text-xl font-serif font-semibold mb-3 group-hover:text-primary transition-colors">
                     {service.title}
                   </h3>
-                  
+
                   <p className="text-muted-foreground mb-4 leading-relaxed">
                     {service.description}
                   </p>
-                  
+
                   <div className="space-y-2">
                     {service.features.map((feature, featureIndex) => (
-                      <div key={featureIndex} className="flex items-center text-sm">
+                      <div
+                        key={featureIndex}
+                        className="flex items-center text-sm"
+                      >
                         <div className="w-1.5 h-1.5 bg-accent rounded-full mr-3"></div>
                         <span className="text-muted-foreground">{feature}</span>
                       </div>
@@ -153,16 +169,38 @@ const Services = () => {
           className="mt-20"
         >
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-serif font-bold mb-4">Why Choose Our Services?</h3>
-            <p className="text-muted-foreground text-lg">Experience the difference with professional expertise</p>
+            <h3 className="text-3xl font-serif font-bold mb-4">
+              Why Choose Our Services?
+            </h3>
+            <p className="text-muted-foreground text-lg">
+              Experience the difference with professional expertise
+            </p>
           </div>
-          
+
           <div className="grid md:grid-cols-4 gap-8">
             {[
-              { icon: Award, title: "Certified Expert", description: "Qualified CA with proven track record" },
-              { icon: Clock, title: "Timely Delivery", description: "Always meeting deadlines and commitments" },
-              { icon: Users, title: "Personal Attention", description: "Dedicated support for each client" },
-              { icon: Shield, title: "Confidential", description: "Strict confidentiality and data security" }
+              {
+                icon: Award,
+                title: "Aspiring Chartered Accountant",
+                description:
+                  "CA Finalist delivering reliable and growth-focused financial solutions.",
+              },
+
+              {
+                icon: Clock,
+                title: "Timely Delivery",
+                description: "Always meeting deadlines and commitments",
+              },
+              {
+                icon: Users,
+                title: "Personal Attention",
+                description: "Dedicated support for each client",
+              },
+              {
+                icon: Shield,
+                title: "Confidential",
+                description: "Strict confidentiality and data security",
+              },
             ].map((feature, index) => {
               const Icon = feature.icon;
               return (
@@ -177,7 +215,9 @@ const Services = () => {
                     <Icon className="w-8 h-8 text-primary" />
                   </div>
                   <h4 className="font-semibold mb-2">{feature.title}</h4>
-                  <p className="text-muted-foreground text-sm">{feature.description}</p>
+                  <p className="text-muted-foreground text-sm">
+                    {feature.description}
+                  </p>
                 </motion.div>
               );
             })}

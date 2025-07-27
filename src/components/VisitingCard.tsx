@@ -12,27 +12,12 @@ import {
 } from "lucide-react";
 
 const VisitingCard = () => {
-  const handleDownloadVCard = () => {
-    const vCardData = `BEGIN:VCARD
-VERSION:3.0
-FN:CA Rajesh Kumar
-TITLE:Chartered Accountant & Financial Consultant
-ORG:CA Professional
-TEL:+91 98765 43210
-EMAIL:contact@caprofessional.com
-URL:https://www.caprofessional.com
-ADR:;;Office 204, Business Tower;Mumbai;Maharashtra;400001;India
-NOTE:Expert in Tax Planning, Audit Services, and Financial Advisory
-END:VCARD`;
-
-    const blob = new Blob([vCardData], { type: 'text/vcard' });
-    const url = window.URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = 'CA_Professional_Contact.vcf';
-    link.click();
-    window.URL.revokeObjectURL(url);
-  };
+ const handleDownloadImage = () => {
+  const link = document.createElement("a");
+  link.href = "/visiting.jpg"; // Your image path in /public
+  link.download = "Shanmukha_CA_Profile.jpg";
+  link.click();
+};
 
   return (
     <section className="py-20 bg-gradient-to-r from-primary/5 to-accent/5">
@@ -75,16 +60,16 @@ END:VCARD`;
                       CA
                     </div>
                     <div>
-                      <h3 className="text-3xl font-serif font-bold mb-2">CA Rajesh Kumar</h3>
+                      <h3 className="text-3xl font-serif font-bold mb-2">Shanmukha Kanamarlapudi</h3>
                       <p className="text-xl text-primary font-medium mb-2">
-                        Chartered Accountant & Financial Consultant
+                        CA & CMA Finalist | B.Com Graduate
                       </p>
                       <div className="flex flex-wrap gap-2">
                         <Badge variant="secondary" className="bg-primary/10 text-primary">
-                          CA, CPA, CFE
+                          100+ Happy Clients
                         </Badge>
                         <Badge variant="secondary" className="bg-gold/10 text-gold-dark">
-                          15+ Years Experience
+                          1+ Years Experience
                         </Badge>
                       </div>
                     </div>
@@ -98,7 +83,7 @@ END:VCARD`;
                       </div>
                       <div>
                         <p className="text-sm text-muted-foreground">Phone</p>
-                        <p className="font-medium">+91 98765 43210</p>
+                        <p className="font-medium">+91 6305023803</p>
                       </div>
                     </div>
 
@@ -108,7 +93,7 @@ END:VCARD`;
                       </div>
                       <div>
                         <p className="text-sm text-muted-foreground">Email</p>
-                        <p className="font-medium">contact@caprofessional.com</p>
+                        <p className="font-medium">Shanmukha23803@gmail.com</p>
                       </div>
                     </div>
 
@@ -118,7 +103,7 @@ END:VCARD`;
                       </div>
                       <div>
                         <p className="text-sm text-muted-foreground">Office</p>
-                        <p className="font-medium">Mumbai, India</p>
+                        <p className="font-medium">Hyderabad, India</p>
                       </div>
                     </div>
 
@@ -126,10 +111,10 @@ END:VCARD`;
                       <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center">
                         <Globe className="w-5 h-5 text-primary" />
                       </div>
-                      <div>
+                      {/* <div>
                         <p className="text-sm text-muted-foreground">Website</p>
                         <p className="font-medium">www.caprofessional.com</p>
-                      </div>
+                      </div> */}
                     </div>
                   </div>
 
@@ -138,11 +123,10 @@ END:VCARD`;
                     <p className="text-sm text-muted-foreground mb-3">Specializations</p>
                     <div className="flex flex-wrap gap-2">
                       {[
-                        "Tax Planning",
-                        "Audit Services", 
+                        "Tax Planning", 
                         "GST Compliance",
                         "Financial Advisory",
-                        "Company Formation"
+                        
                       ].map((spec, index) => (
                         <Badge key={index} variant="outline" className="text-xs">
                           {spec}
@@ -154,42 +138,62 @@ END:VCARD`;
 
                 {/* QR Code & Actions */}
                 <div className="text-center space-y-6">
-                  <div className="w-40 h-40 mx-auto bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl flex items-center justify-center border-2 border-dashed border-primary/30">
+                  {/* <div className="w-40 h-40 mx-auto bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl flex items-center justify-center border-2 border-dashed border-primary/30">
                     <div className="text-center">
                       <QrCode className="w-16 h-16 text-primary mx-auto mb-2" />
                       <p className="text-xs text-muted-foreground">Scan to Connect</p>
                     </div>
-                  </div>
+                  </div> */}
+                  <div className="w-40 h-40 mx-auto flex flex-col items-center justify-center space-y-2">
+  <img
+    src="/QrCode.jpg" // Replace with your QR image path
+    alt="QR Code"
+    className="w-32 h-32 object-contain rounded-md shadow-md border border-primary/20"
+  />
+  <p className="text-xs text-muted-foreground text-center">Scan to Connect</p>
+</div>
+
+
+
+
 
                   <div className="space-y-3">
                     <motion.button
                       whileHover={{ scale: 1.05 }}
                       whileTap={{ scale: 0.95 }}
-                      onClick={handleDownloadVCard}
+                      onClick={handleDownloadImage}
                       className="w-full bg-primary text-primary-foreground px-6 py-3 rounded-xl font-medium flex items-center justify-center gap-2 hover:bg-primary/90 transition-colors"
                     >
                       <Download className="w-4 h-4" />
-                      Download Contact
+                      Download Visiting Card
                     </motion.button>
 
-                    <div className="flex gap-2">
-                      <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg flex items-center justify-center gap-2 hover:bg-blue-700 transition-colors"
-                      >
-                        <Linkedin className="w-4 h-4" />
-                        LinkedIn
-                      </motion.button>
-                      <motion.button
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="flex-1 bg-green-600 text-white px-4 py-2 rounded-lg flex items-center justify-center gap-2 hover:bg-green-700 transition-colors"
-                      >
-                        <Phone className="w-4 h-4" />
-                        WhatsApp
-                      </motion.button>
-                    </div>
+<div className="flex gap-2">
+  <motion.a
+    href="https://www.linkedin.com/in/shanmukha-kanamarlapudi-75064a320" // Replace with actual LinkedIn URL
+    target="_blank"
+    rel="noopener noreferrer"
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+    className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg flex items-center justify-center gap-2 hover:bg-blue-700 transition-colors"
+  >
+    <Linkedin className="w-4 h-4" />
+    LinkedIn
+  </motion.a>
+
+  <motion.a
+    href="https://wa.me/+916305023803"
+    target="_blank"
+    rel="noopener noreferrer"
+    whileHover={{ scale: 1.05 }}
+    whileTap={{ scale: 0.95 }}
+    className="flex-1 bg-green-600 text-white px-4 py-2 rounded-lg flex items-center justify-center gap-2 hover:bg-green-700 transition-colors"
+  >
+    <Phone className="w-4 h-4" />
+    WhatsApp
+  </motion.a>
+</div>
+
                   </div>
                 </div>
               </div>

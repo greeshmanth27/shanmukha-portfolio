@@ -22,12 +22,11 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-4 gap-8">
             <div className="md:col-span-2">
-              <h3 className="font-serif text-2xl font-bold mb-4">CA Professional</h3>
+              <h3 className="font-serif text-2xl font-bold mb-4">Shanmukha Kanamarlapudi</h3>
               <p className="text-muted-foreground mb-4 max-w-md">
-                Expert Chartered Accountant providing comprehensive financial services 
-                to help individuals and businesses achieve their financial goals.
+                   CA & CMA Finalist offering personalized, transparent, and client-focused tax and compliance services. From GST and ITR filing to TDS, PF, PT, and digital signature assistance — get timely, accurate, and affordable solutions you can trust.
               </p>
-              <div className="flex space-x-4">
+              {/* <div className="flex space-x-4">
                 <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors cursor-pointer">
                   📧
                 </div>
@@ -37,7 +36,7 @@ const Index = () => {
                 <div className="w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors cursor-pointer">
                   💼
                 </div>
-              </div>
+              </div> */}
             </div>
             
             <div>
@@ -45,24 +44,22 @@ const Index = () => {
               <ul className="space-y-2 text-muted-foreground">
                 <li className="hover:text-primary cursor-pointer transition-colors">Tax Filing</li>
                 <li className="hover:text-primary cursor-pointer transition-colors">GST Compliance</li>
-                <li className="hover:text-primary cursor-pointer transition-colors">Audit Services</li>
-                <li className="hover:text-primary cursor-pointer transition-colors">Financial Advisory</li>
-              </ul>
+                </ul>
             </div>
             
             <div>
               <h4 className="font-semibold mb-4">Contact</h4>
               <ul className="space-y-2 text-muted-foreground">
-                <li>+91 98765 43210</li>
-                <li>contact@caprofessional.com</li>
-                <li>Mumbai, India</li>
-                <li>Mon-Fri 9AM-6PM</li>
+                <li>+91 6305023803</li>
+                <li>shanmukha23803@gmail.com</li>
+                <li>Hyderabad, India</li>
+                <li>Mon-Sat 9AM-6PM</li>
               </ul>
             </div>
           </div>
           
           <div className="border-t border-border mt-8 pt-8 text-center text-muted-foreground">
-            <p>&copy; 2024 CA Professional. All rights reserved. | Designed with care for financial excellence.</p>
+            <p>&copy; Designed with care for financial excellence.</p>
           </div>
         </div>
       </footer>

@@ -49,7 +49,7 @@ const Navigation = () => {
             className="font-serif text-2xl font-bold text-primary cursor-pointer"
             onClick={() => scrollToSection("#home")}
           >
-            CA Professional
+            Shanmukha Kanamarlapudi
           </motion.div>
 
           {/* Desktop Navigation */}
