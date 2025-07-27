@@ -157,7 +157,7 @@ const workExperience = [
     {
       year: "2024",
       achievement: "Multiple Certifications",
-      description: "Achieved CFE and FRM certifications in the same year",
+      description: "Achieved Tally and Advance Tally in the same year",
     },
     {
       year: "2024",
