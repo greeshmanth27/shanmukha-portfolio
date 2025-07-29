@@ -300,7 +300,7 @@ const Contact = () => {
       {/* Modal */}
       {showModal && (
         <div className="fixed inset-0 bg-black/40 z-50 flex items-center justify-center">
-          <div className="bg-white rounded-lg p-6 w-[90%] max-w-md shadow-lg relative">
+          <div className="bg-white dark:bg-black rounded-lg p-6 w-[90%] max-w-md shadow-lg relative">
             <button className="absolute top-3 right-3" onClick={() => setShowModal(false)}>
               <X className="w-5 h-5" />
             </button>
